@@ -14,7 +14,7 @@ const diseasesSchema = new mongoose.Schema({
     required: true,
   },
   treatments: {
-    type: Number,
+    type: String,
     required: true,
   },
   youtube_links: {
@@ -30,3 +30,4 @@ const diseasesSchema = new mongoose.Schema({
 });
 
 module.exports = mongoose.model('Diseases', diseasesSchema);
+
