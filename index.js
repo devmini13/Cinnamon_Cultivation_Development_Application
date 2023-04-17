@@ -21,6 +21,7 @@ mongoose
   .catch((error) => console.log(error));
 
 app.use("/auth", require("./routes/UserLogin"));
+app.use("/bank", require("./routes/Banks"));
 
 const port = process.env.PORT || 8100;
 
