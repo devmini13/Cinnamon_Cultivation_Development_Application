@@ -1,23 +1,21 @@
 const express = require('express');
+const router = express.Router();
 const Diseases = require('../models/Diseases');
 
-
-const router = express.Router();
-
 //save diseases details
-router.diseases('/diseases/save',(req,res)=>{
-  let newDisease = new Diseases(req,body);
+router.post('/diseases/save',(req,res)=>{
+  let newDiseases = new Diseases(req.body);
 
-  newDisease.save((err) => {
+  newDiseases.save((err) =>{
     if(err){
       return res.status(400).json({
         error:err
       });
     }
     return res.status(200).json({
-      success:"Disease details saved successfully"
+      success:"Saves Successfully"
     });
-  });
 });
 
+});
 module.exports = router;

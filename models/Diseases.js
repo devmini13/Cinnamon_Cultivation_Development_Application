@@ -22,7 +22,8 @@ const diseasesSchema = new mongoose.Schema({
     validate: {
       //validation for youtube links
       validator: function(v) {
-        return /^https?:\/\/(www\.)?youtube\.com\/watch\?v=[\w-]{11}$/.test(v);
+        return /^https?:\/\/(www\.)?youtube\.com\/(watch\?v=|embed\/|v\/)?[\w-]{11}$/;
+        
       },
       message: props => `${props.value} is not a valid YouTube link!`
     }
