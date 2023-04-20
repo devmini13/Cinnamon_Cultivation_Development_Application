@@ -22,6 +22,7 @@ mongoose
 
 app.use("/auth", require("./routes/UserLogin"));
 app.use("/bank", require("./routes/Banks"));
+app.use("/contact", require("./routes/Contacts"));
 
 const port = process.env.PORT || 8100;
 

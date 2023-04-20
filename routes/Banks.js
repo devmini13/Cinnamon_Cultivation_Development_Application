@@ -75,7 +75,7 @@ router.get('/:id', (req,res) => {
 });
 
 
-//Update Material's details
+//Update Bank's details
 
 router.patch('/update_existing_details/:id', (req,res)=>{
 
@@ -98,7 +98,7 @@ router.patch('/update_existing_details/:id', (req,res)=>{
 });
 
 
-//Delete Materials in the list
+//Delete Bank Details in the list
 
 router.delete('/delete/:id', (req,res)=>{
 
