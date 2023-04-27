@@ -6,7 +6,7 @@ const router = express.Router();
 
 // Registered New Bank to the System
 
-router.post('/regitered_new_bank',(req,res) => {
+router.post('/registered_new_bank',(req,res) => {
 
     const bankRegID = req.body.bankRegID;
     const bankName = req.body.bankName;
@@ -57,7 +57,7 @@ router.get('/all_bank_details',(req,res)=>{
 });
 
 
-// Get a Specific Information of One by one 
+// Get a Specific Information of One by One 
 
 router.get('/:id', (req,res) => {
 
