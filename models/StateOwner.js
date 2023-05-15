@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 //declaring a variable of the harvest scema
-const harvestSchema = new mongeese.Schema({
+const stateOwnerSchema = new mongeese.Schema({
     //define properties
     topic:{
         type:String,
@@ -16,4 +16,4 @@ const harvestSchema = new mongeese.Schema({
         required:true
     }
 });
-module.exports = mongeese.model('HarvestPosts',harvestSchema);
+module.exports = mongeese.model('StateOwner',stateOwnerSchema);
