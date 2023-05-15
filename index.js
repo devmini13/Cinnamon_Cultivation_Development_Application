@@ -30,6 +30,7 @@ app.get("/", (req, res) => {
   res.send("Running Application Successfully..!");
 });
 
+//Write database connection's functioanality.
 mongoose
   .connect(process.env.MONGO_URL, {
     useUnifiedTopology: true,
