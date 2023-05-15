@@ -1,9 +1,27 @@
 const express = require("express");
-const app = express();
-const cors = require("cors");
 const mongoose = require("mongoose");
+//invoking express by using (const app).
+const app = express();
+
+const cors = require("cors");
+const bodyParser = require("body-parser");
+
 const dotenv = require("dotenv");
+
 dotenv.config();
+
+//Create a Middleware for interact the request before going response (app middleware).
+app.use(bodyParser.json());
+
+//Import routes.
+const StateOwnerRegRoutes = require('./routes/StateOwnerReg');
+
+//use cors as middleware
+app.use(cors());
+
+//pass how the routes want to communicate the server(route middleware)
+app.use(StateOwnerRegRoutes)
+
 
 app.use(cors());
 app.use(express.json());

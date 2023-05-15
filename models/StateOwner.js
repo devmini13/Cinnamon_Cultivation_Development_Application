@@ -1,7 +1,7 @@
-const mongoose = require('module');
+const mongoose = require('mongoose');
 
 //Declaring a variable of the harvest scema.
-const stateOwnerSchema = new mongeese.Schema({
+const stateOwnerSchema = new mongoose.Schema({
     //Define properties/variables.
     name:{
         type:String,
@@ -28,4 +28,4 @@ const stateOwnerSchema = new mongeese.Schema({
 
 //Export this because we use this model in routes.
 //'StateOwners' -> Database name and pass the schema
-module.exports = mongeese.model('StateOwners',stateOwnerSchema);  
+module.exports = mongoose.model('StateOwners',stateOwnerSchema);  
