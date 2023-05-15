@@ -7,15 +7,15 @@ const stateOwnerSchema = new mongoose.Schema({
         type:String,
         required:true
     },
-    NIC:{
+    nic:{
         type:String,
         required:true
     },
-    TelephoneNo:{
+    telephoneNo:{
         type:String,
         required:true
     },
-    State:{
+    state:{
         type:String,
         required:true
     },

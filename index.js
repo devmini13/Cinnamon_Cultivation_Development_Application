@@ -7,8 +7,9 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 
 const dotenv = require("dotenv");
-
 dotenv.config();
+
+mongoose.set('strictQuery', false);
 
 //Create a Middleware for interact the request before going response (app middleware).
 app.use(bodyParser.json());
@@ -20,10 +21,9 @@ const StateOwnerRegRoutes = require('./routes/StateOwnerReg');
 app.use(cors());
 
 //pass how the routes want to communicate the server(route middleware)
-app.use(StateOwnerRegRoutes)
+app.use('/api', StateOwnerRegRoutes);
 
 
-app.use(cors());
 app.use(express.json());
 
 app.get("/", (req, res) => {
@@ -41,7 +41,7 @@ mongoose
 
 app.use("/auth", require("./routes/UserLogin"));
 
-const port = process.env.PORT || 8100;
+const port = process.env.PORT || 8000;
 
 app.listen(port, () => {
   console.log(`Server Running on Port - ${port}`);

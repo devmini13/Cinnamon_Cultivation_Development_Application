@@ -10,10 +10,10 @@ const router = express.Router();
 
 //Write, For save State Owner details by using POST HTTP request method.
 //Create path.
-router.post('/owner/save',(req,res) =>{
+router.post('/ownerDetails/save',(req,res) =>{
     
     //request the content
-    let newPost = new StateOwner(request.body);
+    let newOwner = new StateOwner(request.body);
 
     //save the content
     newOwner.save((err) =>{

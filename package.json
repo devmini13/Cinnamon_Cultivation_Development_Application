@@ -17,6 +17,7 @@
     "express-validator": "^6.15.0",
     "html-pdf": "^3.0.1",
     "mongoose": "^6.10.0",
-    "nodemon": "^2.0.22"
+    "nodemon": "^2.0.22",
+    "request": "^2.88.2"
   }
 }
