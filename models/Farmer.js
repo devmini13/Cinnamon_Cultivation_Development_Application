@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-//declaring a variable
+//declaring a variable of the harvest scema
 const harvestSchema = new mongeese.Schema({
     //define properties
     topic:{
