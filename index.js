@@ -14,8 +14,9 @@ dotenv.config();
 //middleware
 app.use(cors());
 app.use(express.json())
-//route middleware
+//route middleware for diseasesRouter
 app.use('/api', diseasesRouter);
+//route niddleware for stateOwner
 app.use('/api',stateOwnerRouter);
 
 app.use(cors());
