@@ -19,6 +19,21 @@ router.post('/stateOwner/save',(req,res)=>{
 
 });
 
+//Get stateOwner details
+router.get('/stateOwners',(req,res) => {
+    StateOwner.find().exec((err,StateOwner) =>{
+      if(err){
+        return res.status(400).json({
+          error:err
+        });
+      }
+      return res.status(200).json({
+        success:true,
+        existingPosts:StateOwner
+      });
+    });
+});
+
 
 
 
