@@ -53,7 +53,19 @@ router.put('/stateOwner/update/:id',(req,res)=>{
     );
   });
 
-
+//Delete stateOwner details 
+router.delete('/stateOwner/delete/:id',(req,res) => {
+    StateOwner.findByIdAndDelete(req.params.id).exec((err,deletedStateOwner)=>{
+      if(err) return res.status(400).json({
+        message:"Delete unsuccesfull",err
+      });
+  
+      return res.json({
+        message:"Delete Successfull",deletedStateOwner
+      });
+    });
+  });
+      
 
 
 
