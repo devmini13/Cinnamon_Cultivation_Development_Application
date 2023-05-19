@@ -34,6 +34,24 @@ router.get('/stateOwners',(req,res) => {
     });
 });
 
+//Update stateOwner details
+router.put('/stateOwner/update/:id',(req,res)=>{
+    StateOwner.findByIdAndUpdate(
+      req.params.id,
+      {
+        $set:req.body
+      },
+      (err,StateOwner)=>{
+        if(err){
+          return res.status(400).json({error:err});
+        }
+  
+        return res.status(200).json({
+          success:"Updated Successfully."
+        });
+      }
+    );
+  });
 
 
 
