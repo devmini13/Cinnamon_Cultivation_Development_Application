@@ -5,7 +5,9 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const bodyParser = require("body-parser");
 const diseasesRouter = require('./routes/Diseases');
-const stateOwnerRouter = require('./routes/StateOwner')
+const stateOwnerRouter = require('./routes/StateOwner');
+const feedback = require('./routes/feedback')
+
 mongoose.set('strictQuery', false);
 
 
@@ -18,6 +20,9 @@ app.use(express.json())
 app.use('/api', diseasesRouter);
 //route niddleware for stateOwner
 app.use('/api',stateOwnerRouter);
+//route niddleware for feedback
+app.use('/api',feedback);
+
 
 app.use(cors());
 app.use(express.json());
